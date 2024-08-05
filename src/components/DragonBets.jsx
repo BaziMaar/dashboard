@@ -21,7 +21,7 @@ const DragonBets = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`https://sattajodileak.com/dragon/getDragonTrans?phone=${phone}`);
+      const response = await axios.get(`https://ajayLuckyBrust.today/dragon/getDragonTrans?phone=${phone}`);
       const transactions = response.data.transactions;
 
       const sumWin = transactions.reduce((acc, transaction) => {

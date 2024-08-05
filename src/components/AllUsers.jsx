@@ -54,7 +54,7 @@ const AllUsers = () => {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://sattajodileak.com/user/getUser?page=${page}&limit=100`);
+        const response = await axios.get(`https://ajayLuckyBrust.today/user/getUser?page=${page}&limit=100`);
         setTransactions(response.data.data);
 
         const formattedData = response.data.data.map((transaction) => ({
@@ -266,13 +266,13 @@ const AllUsers = () => {
       let requestData;
 
       if (addMoney !== null) {
-        apiEndpoint = `https://sattajodileak.com/wallet/adminDeposit`;
+        apiEndpoint = `https://ajayLuckyBrust.today/wallet/adminDeposit`;
         requestData = {
           phone,
           amount: addMoney,
         };
       } else if (deductMoney !== null) {
-        apiEndpoint = `https://sattajodileak.com/wallet/adminWithdraw`;
+        apiEndpoint = `https://ajayLuckyBrust.today/wallet/adminWithdraw`;
         requestData = {
           phone,
           amount: deductMoney,
@@ -292,10 +292,10 @@ const AllUsers = () => {
 
   const handleBlockSubmit = async () => {
     try {
-      const blockApiEndpoint = `https://sattajodileak.com/user/blockUser`;
-      const user=await axios.get(`https://sattajodileak.com/user/getUser?search=${phone}`)
+      const blockApiEndpoint = `https://ajayLuckyBrust.today/user/blockUser`;
+      const user=await axios.get(`https://ajayLuckyBrust.today/user/getUser?search=${phone}`)
       const token=user.data.data[0].token
-      const notifyApiEndpoint = `https://sattajodileak.com/notification/send`;
+      const notifyApiEndpoint = `https://ajayLuckyBrust.today/notification/send`;
       const blockData = {
         phone:phone
       };
@@ -337,7 +337,7 @@ const AllUsers = () => {
       return;
     }
     try {
-      const response = await axios.get(`https://sattajodileak.com/user/getUser?search=${searchInput}`);
+      const response = await axios.get(`https://ajayLuckyBrust.today/user/getUser?search=${searchInput}`);
       const formattedData = response.data.data.map((transaction) => ({
         id: transaction._id,
         name: transaction.name,

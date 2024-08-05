@@ -21,7 +21,7 @@ const ReferredDetails = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`https://sattajodileak.com/wallet/getReferred?phone=${phone}`);
+      const response = await axios.get(`https://ajayLuckyBrust.today/wallet/getReferred?phone=${phone}`);
       const transactions = response.data.referred;
       console.log(transactions);
 

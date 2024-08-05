@@ -21,7 +21,7 @@ const MinesBets = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`https://sattajodileak.com/mines/getMinesTrans?phone=${phone}`);
+      const response = await axios.get(`https://ajayLuckyBrust.today/mines/getMinesTrans?phone=${phone}`);
       const transactions = response.data.transactions;
       console.log(response)
 

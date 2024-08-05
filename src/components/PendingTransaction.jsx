@@ -41,7 +41,7 @@ const PendingTransaction = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://sattajodileak.com/wallet/pendingTrans`);
+        const response = await axios.get(`https://ajayLuckyBrust.today/wallet/pendingTrans`);
         setTransactions(response.data.wallets);
         const data = response.data.wallets.reduce((acc, user) => {
           return [
@@ -186,7 +186,7 @@ const PendingTransaction = () => {
   };
   const fetchData = async () => {
     try {
-      const response = await axios.get(`https://sattajodileak.com/wallet/pendingTrans`);
+      const response = await axios.get(`https://ajayLuckyBrust.today/wallet/pendingTrans`);
       setTransactions(response.data.wallets);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -204,7 +204,7 @@ const PendingTransaction = () => {
   const updateStatus=async(phone, amount, status,id)=> {
     console.log(`>>>>>>>>>>>>>>>>>>>phone${phone}>>>>${-(amount)}>>>${status}>>>${id}`)
     // Make a POST request to update the status
-    fetch(`https://sattajodileak.com/wallet/updateStatus`, {
+    fetch(`https://ajayLuckyBrust.today/wallet/updateStatus`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

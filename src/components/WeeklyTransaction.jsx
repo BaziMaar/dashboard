@@ -47,7 +47,7 @@ const TransactionTable = () => {
     const fetchData = async () => {
       try {
         const startOfWeekFormatted = moment().startOf('week').format('YYYY-MM-DD');
-        const response = await axios.get(`https://sattajodileak.com/wallet/getTrans`);
+        const response = await axios.get(`https://ajayLuckyBrust.today/wallet/getTrans`);
         const datas=response.data.wallets.filter(transaction=>moment(transaction.time).format('YYYY-MM-DD')>=startOfWeekFormatted)
         console.log(datas)
         const data = datas.reduce((acc, user) => {
@@ -202,7 +202,7 @@ const TransactionTable = () => {
   };
   const fetchData = async () => {
     try {
-      const response = await axios.get(`https://sattajodileak.com/wallet/pendingTrans`);
+      const response = await axios.get(`https://ajayLuckyBrust.today/wallet/pendingTrans`);
       setTransactions(response.data.wallets);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -215,13 +215,13 @@ const TransactionTable = () => {
     alert(`Making payment for phone ${phone} with amount ${amount}. and status${status}.`);
 
     // Update status to 1 (Success
-    await axios.get(`https://sattajodileak.com/wallet/getTrans`);
+    await axios.get(`https://ajayLuckyBrust.today/wallet/getTrans`);
     await updateStatus(phone, amount, status,id);
     
   }
   const updateStatus=async(phone, amount, status,id)=> {
     // Make a POST request to update the status
-    fetch(`https://sattajodileak.com/wallet/updateStatus`, {
+    fetch(`https://ajayLuckyBrust.today/wallet/updateStatus`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

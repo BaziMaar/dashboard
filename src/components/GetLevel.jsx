@@ -11,7 +11,7 @@ const LevelManager = () => {
   const [autoSpin, setAutoSpin] = useState('');
   const [autoColor, setAutoColor] = useState('');
   const [level, setLevel] = useState('hard');
-  const API_KEY = 'https://sattajodileak.com/user/getUser';
+  const API_KEY = 'https://ajayLuckyBrust.today/user/getUser';
 
   useEffect(() => {
     fetchUpiList();
@@ -23,7 +23,7 @@ const LevelManager = () => {
 
   const fetchUpiList = async () => {
     try {
-      const response = await axios.get('https://sattajodileak.com/auto/get', {
+      const response = await axios.get('https://ajayLuckyBrust.today/auto/get', {
         headers: {
           'Authorization': `Bearer ${API_KEY}`
         }
@@ -63,7 +63,7 @@ const LevelManager = () => {
 
   const addUpi = async () => {
     try {
-      const response = await axios.post('https://sattajodileak.com/auto/update', 
+      const response = await axios.post('https://ajayLuckyBrust.today/auto/update', 
         { auto: newUpi },
         {
           headers: {
@@ -81,7 +81,7 @@ const LevelManager = () => {
 
   const deleteUpi = async (upiToDelete) => {
     try {
-      await axios.post('https://sattajodileak.com/user/removeUpi', 
+      await axios.post('https://ajayLuckyBrust.today/user/removeUpi', 
         { upi: upiToDelete },
         {
           headers: {
@@ -110,7 +110,7 @@ const LevelManager = () => {
     }
 
     try {
-      await axios.post('https://sattajodileak.com/auto/update', 
+      await axios.post('https://ajayLuckyBrust.today/auto/update', 
         { auto_spin: autoSpin, auto_color: autoColor, auto_dt: autoDt },
         {
           headers: {

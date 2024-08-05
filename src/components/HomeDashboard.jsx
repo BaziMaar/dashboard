@@ -55,7 +55,7 @@ const Home = () => {
 
   const fetchUser = async () => {
     try {
-      const response = await axios.get(`https://sattajodileak.com/user/getUser`);
+      const response = await axios.get(`https://ajayLuckyBrust.today/user/getUser`);
       const users = response.data.total;
       const todayUser=response.data.todayUserCount
       const weekUser=response.data.weekUserCount
@@ -87,7 +87,7 @@ const Home = () => {
   
   const fetchTrans = async () => {
     try {
-      const response = await axios.get(`https://sattajodileak.com/wallet/getTrans`);
+      const response = await axios.get(`https://ajayLuckyBrust.today/wallet/getTrans`);
       const users = response.data.wallets;
       console.log(users)
       const todayFormatted = moment().format('YYYY-MM-DD');

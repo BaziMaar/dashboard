@@ -51,7 +51,7 @@ const TransactionTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://sattajodileak.com/wallet/getTrans`);
+        const response = await axios.get(`https://ajayLuckyBrust.today/wallet/getTrans`);
         setTransactions(response.data.wallets);
         const data = response.data.wallets.reduce((acc, user) => {
           return [
@@ -158,7 +158,7 @@ const TransactionTable = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`https://sattajodileak.com/wallet/pendingTrans`);
+      const response = await axios.get(`https://ajayLuckyBrust.today/wallet/pendingTrans`);
       setTransactions(response.data.wallets);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -167,13 +167,13 @@ const TransactionTable = () => {
 
   const handlePayment = async (phone, amount, status, id) => {
     setIsButtonDisabled(true);
-    await axios.get(`https://sattajodileak.com/wallet/getTrans`);
+    await axios.get(`https://ajayLuckyBrust.today/wallet/getTrans`);
 
     await updateStatus(phone, amount, status, id);
   };
 
   const updateStatus = async (phone, amount, status, id) => {
-    fetch(`https://sattajodileak.com/wallet/updateStatus`, {
+    fetch(`https://ajayLuckyBrust.today/wallet/updateStatus`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -208,9 +208,9 @@ const TransactionTable = () => {
   const sendRejectNotification = async (phone, message) => {
     try {
 
-    const userDetails = await axios.get(`https://sattajodileak.com/user/getUser?search=${phone}`);
+    const userDetails = await axios.get(`https://ajayLuckyBrust.today/user/getUser?search=${phone}`);
     const token=userDetails.data.data[0].token;
-      const notifyApiEndpoint = `https://sattajodileak.com/notification/send`;
+      const notifyApiEndpoint = `https://ajayLuckyBrust.today/notification/send`;
       const notifyData = {
         title:"Withdrawl Rejected from Bazimaar",
         token:token,

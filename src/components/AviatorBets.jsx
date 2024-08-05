@@ -21,7 +21,7 @@ const AviatorBets = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`https://sattajodileak.com/api/getTrans?phone=${phone}`);
+      const response = await axios.get(`https://ajayLuckyBrust.today/api/getTrans?phone=${phone}`);
       const transactions = response.data.transactions;
 
       const sumWin = transactions.reduce((acc, transaction) => {

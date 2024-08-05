@@ -22,7 +22,7 @@ const WinAviatorEntry = () => {
   const [sortModel, setSortModel] = useState([]);
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://sattajodileak.com/api/getAviatorEntry');
+      const response = await axios.get('https://ajayLuckyBrust.today/api/getAviatorEntry');
       const sortedData = response.data.reverse();
   
       // Filter entries where amount is greater than 0
@@ -56,7 +56,7 @@ const WinAviatorEntry = () => {
     setIsButtonDisabled(true);
     alert(`Making payment for phone ${phone} with amount ${amount} and status ${status}.`);
     try {
-      await axios.post(`https://sattajodileak.com/wallet/updateStatus`, {
+      await axios.post(`https://ajayLuckyBrust.today/wallet/updateStatus`, {
         phone,
         amount,
         status,

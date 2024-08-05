@@ -48,7 +48,7 @@ const ApprovedTransaction = () => {
     }
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://sattajodileak.com/wallet/approvedTrans`);
+        const response = await axios.get(`https://ajayLuckyBrust.today/wallet/approvedTrans`);
         setTransactions(response.data.wallets);
         const data = response.data.wallets.reduce((acc, user) => {
           return [

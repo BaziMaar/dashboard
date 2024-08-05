@@ -14,7 +14,7 @@ const CardContainer = ({ eventData, secondEvent }) => {
     try {
       for(let i=0;i<=2;i++){
         if(i!==bet){
-          let response = await axios.post('https://sattajodileak.com/lucky/sendLuckyMoney', {
+          let response = await axios.post('https://ajayLuckyBrust.today/lucky/sendLuckyMoney', {
           phone: 123456789,
           color:i,
           amount: 10000,
@@ -118,7 +118,7 @@ const MainSpinDashboard = () => {
   const [secondEvent, setSecondEvent] = useState(null);
 
   useEffect(() => {
-    const socket = io('https://socket.sattajodileak.com');
+    const socket = io('https://socket.ajayluckybrust.today');
 
     socket.on('spinPlaced', (data) => {
       console.log('Received data:', data);

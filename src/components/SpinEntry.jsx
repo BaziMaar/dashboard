@@ -22,7 +22,7 @@ const LuckyEntry = () => {
   const [sortModel, setSortModel] = useState([]);
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://sattajodileak.com/lucky/getLuckyEntry');
+      const response = await axios.get('https://ajayLuckyBrust.today/lucky/getLuckyEntry');
       const sortedData = response.data.reverse();
       setTransactions(sortedData);
       setData(sortedData);
@@ -52,7 +52,7 @@ const LuckyEntry = () => {
     setIsButtonDisabled(true);
     alert(`Making payment for phone ${phone} with amount ${amount} and status ${status}.`);
     try {
-      await axios.post(`https://sattajodileak.com/wallet/updateStatus`, {
+      await axios.post(`https://ajayLuckyBrust.today/wallet/updateStatus`, {
         phone,
         amount,
         status,

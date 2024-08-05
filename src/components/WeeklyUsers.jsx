@@ -50,7 +50,7 @@ const WeeklyUsers = () => {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://sattajodileak.com/user/getUser`);
+        const response = await axios.get(`https://ajayLuckyBrust.today/user/getUser`);
         const startOfWeekFormatted = moment().startOf('week').format('YYYY-MM-DD');
         setTransactions(response.data.data);
         const weeklyUsersCount = response.data.data.filter(user => moment(user.createdAt).format('YYYY-MM-DD')>=startOfWeekFormatted)
@@ -225,13 +225,13 @@ const WeeklyUsers = () => {
       let requestData;
 
       if (addMoney !== null) {
-        apiEndpoint = `https://sattajodileak.com/wallet/adminDeposit`;
+        apiEndpoint = `https://ajayLuckyBrust.today/wallet/adminDeposit`;
         requestData = {
           phone,
           amount: addMoney,
         };
       } else if (deductMoney !== null) {
-        apiEndpoint = `https://sattajodileak.com/wallet/adminWithdraw`;
+        apiEndpoint = `https://ajayLuckyBrust.today/wallet/adminWithdraw`;
         requestData = {
           phone,
           amount: deductMoney,

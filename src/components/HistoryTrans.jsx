@@ -25,7 +25,7 @@ const HistoryTrans = (props) => {
     try {
       
       console.log(`>>>>>>>>json>>>>>>`);
-      const response = await axios.get(`https://sattajodileak.com/wallet/getTransiction?phone=${phone}`);
+      const response = await axios.get(`https://ajayLuckyBrust.today/wallet/getTransiction?phone=${phone}`);
       setTransactions(response.data.wallet);
       console.log(`>>>>>>>><<<${JSON.stringify(response.data.wallet)}`)
       const sum = response.data.wallet.walletTrans.reduce((acc, transaction) => {

@@ -21,7 +21,7 @@ const ColorBets = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`https://sattajodileak.com/color/getColorTrans?phone=${phone}`);
+      const response = await axios.get(`https://ajayLuckyBrust.today/color/getColorTrans?phone=${phone}`);
       const transactions = response.data.transactions;
 
       const sumWin = transactions.reduce((acc, transaction) => {
